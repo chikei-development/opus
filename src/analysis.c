@@ -32,7 +32,7 @@
 #define ANALYSIS_C
 
 #ifdef MLP_TRAINING
-#include <stdio.h>
+//#include <stdio.h>
 #endif
 
 #include "mathops.h"
@@ -939,9 +939,9 @@ static void tonality_analysis(TonalityAnalysisState *tonal, const CELTMode *celt
 
     /*printf("%f %f %f\n", frame_probs[0], frame_probs[1], info->music_prob);*/
 #ifdef MLP_TRAINING
-    for (i=0;i<25;i++)
-       printf("%f ", features[i]);
-    printf("\n");
+//    for (i=0;i<25;i++)
+//       printf("%f ", features[i]);
+//    printf("\n");
 #endif
 
     info->bandwidth = bandwidth;

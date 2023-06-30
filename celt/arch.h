@@ -65,14 +65,14 @@ __attribute__((noreturn))
 void celt_fatal(const char *str, const char *file, int line);
 
 #if defined(CELT_C) && !defined(OVERRIDE_celt_fatal)
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 #ifdef __GNUC__
 __attribute__((noreturn))
 #endif
 void celt_fatal(const char *str, const char *file, int line)
 {
-   fprintf (stderr, "Fatal (internal) error in %s, line %d: %s\n", file, line, str);
+//   fprintf (stderr, "Fatal (internal) error in %s, line %d: %s\n", file, line, str);
 #if defined(_MSC_VER)
    _set_abort_behavior( 0, _WRITE_ABORT_MSG);
 #endif
